@@ -1,6 +1,6 @@
 # meditrack
 Submission for GE-Hackathon
-By SudoCode
+By sudocode
 
 # About this product
 
@@ -9,7 +9,7 @@ By SudoCode
 
 # Navigating this repo
 ### [Web client](https://abhisheksharma.design/meditrack-web)
-Bridging the gap between chemists and consumers.
+Bridging the gap between pharmacists and consumers.
 
 ### [Mobile app](#) 
 Helping you track your dosages easily.
