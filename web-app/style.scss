@@ -1,0 +1,416 @@
+@import "reset.css";
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('fonts/Gotham Rounded Bold.eot');
+    src: local('☺'), url('fonts/Gotham Rounded Bold.woff') format('woff'), url('fonts/Gotham Rounded Bold.ttf') format('truetype'), url('fonts/Gotham Rounded Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('fonts/Gotham Rounded Book.eot');
+    src: local('☺'), url('fonts/Gotham Rounded Book.woff') format('woff'), url('fonts/Gotham Rounded Book.ttf') format('truetype'), url('fonts/Gotham Rounded Book.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin placeholder {
+     ::-webkit-input-placeholder {
+        @content
+    }
+    ;
+     :-moz-placeholder {
+        @content
+    }
+    ;
+     ::-moz-placeholder {
+        @content
+    }
+    ;
+     :-ms-input-placeholder {
+        @content
+    }
+    ;
+}
+
+$brand: #0098ff;
+$bg: #fafafa;
+$book: 'Gotham Book';
+$bold: 'Gotham Bold';
+body {
+    background-color: $bg;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+#r1 {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin animation {
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+}
+
+//type styles
+.primary {
+    font-family: $bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    background-color: $brand;
+    padding: 16px;
+    text-transform: uppercase;
+}
+
+.btn {
+    border-radius: 5px;
+    cursor: pointer;
+    @include animation;
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.50);
+    }
+}
+
+.secondary {
+    border-radius: 2px;
+    font-family: $book;
+    font-size: 14px;
+    color: $brand;
+    letter-spacing: 1.75px;
+    background-color: white;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    border: 1px solid $brand;
+}
+
+.title {
+    font-family: $book;
+    font-size: 24px;
+    color: $brand;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.nav {
+    font-family: $book;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.heading {
+    font-family: $book;
+    font-size: 24px;
+    color: #555555;
+    letter-spacing: 0.5px;
+}
+
+.formlabel {
+    font-family: $book;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.emptystate {
+    font-family: $book;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.25);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.normal {
+    font-family: $book;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 80);
+    letter-spacing: 0.28px;
+    line-height: 15*1.55px;
+}
+
+.normaltwo {
+    font-family: $book;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 80);
+    letter-spacing: 0.34px;
+}
+
+//card
+.card {
+    background: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    box-shadow: 0 2px 2px 0 #ECECEC;
+    border-radius: 10px;
+    margin: 40px;
+}
+
+.topbar {
+    height: 66px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 0 0 #D8E7F3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .title {
+        padding-left: 48px;
+    }
+    .user-cntl {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .normal {
+            padding-left: 16px;
+        }
+        .more {
+            height: 12px;
+            width: 12px;
+            padding-right: 48px;
+            padding-left: 12px;
+        }
+        .dpwrapper {
+            height: 44px;
+            width: 44px;
+            border: 1px solid rgba($brand, 0.5);
+            border-radius: 50%;
+            .dp {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                padding: 2px;
+            }
+        }
+    }
+}
+
+.sidebar {
+    height: 100vh;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 1px 0px 0 0 #D8E7F3;
+    div {
+        display: inline-block;
+        a {
+            @include animation;
+            display: flex;
+            padding: 20px 72px 20px 32px;
+            img {
+                margin-right: 16px;
+                vertical-align: bottom;
+            }
+            &:hover {
+                background-color: rgba($brand, 0.02);
+            }
+        }
+    }
+}
+
+.activeoption {
+    span {
+        color: $brand;
+    }
+    background-color: rgba($brand,
+    0.05);
+    border-left: 2px solid $brand;
+}
+
+#welcome {
+    height: 100%;
+    margin: 40px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p {
+        width: 80%;
+        margin: 48px 0px;
+    }
+}
+
+@include placeholder {
+    font-family: Gotham Book;
+    font-size: 15px;
+    color: rgba(68, 68, 68, 0.30);
+    letter-spacing: 0.28px;
+}
+
+#primaryform {
+    width: 100%;
+    #input {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        div {
+            p {
+                margin-bottom: 32px;
+            }
+        }
+        div {
+            form {
+                align-items: flex-end;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                }
+                button {
+                    height: 100%;
+                    &:focus {
+                        background-color: $brand;
+                        color: White;
+                    }
+                }
+                input {
+                    background: #FFFFFF;
+                    border: 1px solid #E2E2E2;
+                    border-radius: 2px;
+                    padding: 12px;
+                    width: 17vw;
+                    @include animation;
+                    &:focus {
+                        border: 1px solid $brand;
+                        outline: none;
+                    }
+                    font-family: Gotham Book;
+                    font-size: 15px;
+                    color: rgb(68,
+                    68,
+                    68);
+                    letter-spacing: 0.28px;
+                }
+                label {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+    #preview {
+        text-align: center;
+        padding: 100px;
+        p {
+            margin-top: 40px;
+        }
+    }
+    #orderform {
+        text-align: center;
+        table {
+            text-align: left;
+            margin-bottom: 36px;
+            td {
+                padding: 16px 0px;
+                padding-right: 14vw;
+            }
+        }
+        padding: 24px;
+    }
+}
+
+#review {
+    text-align: center;
+    padding: 32px;
+    height: 100%;
+    div {
+        .heading {
+            text-align: left;
+            margin-bottom: 32px;
+        }
+    }
+    table {
+        width: 100%;
+        tr {
+            td {
+                text-align: left;
+                vertical-align: middle;
+                padding: 16px;
+                img {
+                    height: 56px;
+                    width: 56px;
+                }
+                .time {
+                    padding-right: 24px;
+                }
+                .unchecked {
+                    filter: grayscale(1);
+                }
+            }
+        }
+    }
+    .totalprice {
+        font-family: 'Gotham Bold';
+        font-size: 24px;
+        color: #00CD1B;
+        letter-spacing: 0.45px;
+    }
+    .price {
+        font-family: 'Gotham Bold';
+    }
+    .gst {
+        opacity: 0.35;
+    }
+    .sendreq {
+        text-align: left;
+        display: flex;
+        align-items: flex-end;
+        .inputbox {
+            display: flex;
+            flex-direction: column;
+            p {
+                text-align: left!important;
+                margin-left: 0;
+                margin-bottom: 12px;
+            }
+            input {
+                background: #FFFFFF;
+                border: 1px solid #E2E2E2;
+                border-radius: 2px;
+                padding: 12px;
+                width: 250px;
+                @include animation;
+                &:focus {
+                    border: 1px solid $brand;
+                    outline: none;
+                }
+                font-family: Gotham Book;
+                font-size: 15px;
+                color: rgb(68,
+                68,
+                68);
+                letter-spacing: 0.28px;
+            }
+        }
+        p {
+            text-align: left;
+            margin-left: 24px;
+        }
+    }
+    .divider {
+        border: 1px solid rgba(#E8E8E8, 0.2);
+        margin: 32px 0px;
+    }
+    button {
+        margin-top: 40px;
+    }
+}
+
+#connection{
+    padding: 32px;
+    height: 100%;
+    width: 80vw;
+    text-align: center;
+    p{
+        margin-bottom: 32px;
+    }
+}

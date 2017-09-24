@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <div id="root">
+        <div id="r0">
+            <topbar></topbar>
+        </div>
+        <div id="r1">
+            <nav-list></nav-list>
+            <div class="card" id="welcome" v-show="homeActive">
+                <img src="assets/emptystate-1.png">
+                <p class="normal">Welcome to Meditrack. Meditrack allows to streamline the process of taking medicines for patients by directly sending them reminders. A patient can also rebook the medicine from the application when his stock gets over.</p>
+                <button class="primary btn" v-show="homeActive" @click="startneworder"> Process a new order</button>
+            </div>
+            <div id="primaryform" v-if="formActive">
+                <div class="card" id="input">
+                    <div>
+                        <p class="heading">Order {{ordernumber}}</p>
+                    </div>
+                    <div>
+                        <form>
+                            <div><label class="formlabel" for="medicinename">Medicine Name</label><input type="text" name="medicinename" placeholder="Start typing name of medicine" v-model="namevalue" required autofocus></div>
+                            <div><label class="formlabel" for="quantity">Quantity</label><input type="number" name="quantity" placeholder="Number of medicine units" v-model="quantityvalue" required></div>
+                            <div><label class="formlabel" for="frequency">Frequency</label><input type="number" name="frequency" placeholder="Frequency of each medicine" v-model="frequencyvalue" required></div>
+                            <button type="submit" class="secondary btn" @click="addMedicine">Add</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card" id="preview" v-show="listEmpty">
+                    <img src="assets/empty.png">
+                    <p class="emptystate">Your Cart is Empty. Add a medicine .</p>
+                </div>
+                <div class="card" id="orderform" v-show="!listEmpty">
+                    <table class="normal">
+                        <tr v-for="order in orders">
+                            <td>{{order.name}}</td>
+                            <td>{{order.qty}} tablets</td>
+                            <td>{{order.f}} times a day</td>
+                        </tr>
+                    </table>
+                    <button class="primary btn" @click="review">Proceed to checkout</button>
+                </div>
+            </div>
+            <div class="card" id="review" v-show="reviewMode">
+                <div>
+                    <p class="heading">Order {{ordernumber}}</p>
+                </div>
+                <table>
+                    <tr>
+                        <td class="formlabel">Medicine Name</td>
+                        <td class="formlabel">Price per tablet</td>
+                        <td class="formlabel">Dosage time</td>
+                        <td class="formlabel">Total price</td>
+                    </tr>
+
+                    <tr v-for="order in orders">
+                        <td class="normal">{{order.name}}</td>
+                        <td class="normal">₹ 11.25</td>
+                        <td class="images-icon">
+                            <img src="assets/morning.png" class="time ">
+                            <img src="assets/noon.png" class="time unchecked">
+                            <img src="assets/evening.png" class="time unchecked">
+                            <img src="assets/night.png">
+                        </td>
+                        <td class="normal price">₹ 120</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="normal gst">Goods and Services Tax (GST)</td>
+                        <td class="normal price gst">₹ 35</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td class="totalprice">₹ 232</td>
+                    </tr>
+                </table>
+                <div class="divider"></div>
+                <div class="sendreq">
+                    <div class="inputbox">
+                        <p class="formlabel">Customer Id</p>
+                        <input type="text" placeholder="Enter the unique id of customer" id="customerid" v-model="userId" v-on:keyup.enter="connect">
+                    </div>
+                    <p class="normal">Ask the customer for his unique identification number. The customer must accept your bill request so that you can send him the reciept details.</p>
+                </div>
+                <button class="primary btn" @click="connect">Send Confirmation</button>
+            </div>
+            <div class="card" id="connection" v-show="connectionCheck">
+
+                <p class="normal" v-if="!ordercomplete"> Waiting for {{userId}} to accept your order....</p>
+                <p class="normal" v-else>Voila! Order Success! Check the details under the Past Orders tab</p>
+                <button class="primary btn">{{buttonText}}</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="vue.js"></script>
+<script src="vue-router.js"></script>
+<script src="script.js"></script>
