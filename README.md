@@ -25,6 +25,8 @@ The web application is a replacement for the boring billing software you often s
 _Helping you track your dosages easily_
 
 ![](https://raw.githubusercontent.com/littlewonder/meditrack-web/master/screenshots/Meditrack-Screenshot-2.png?token=ASVjeh2gqOri82U3_Tmhfcp0QQMnXp6Uks5Z0TQPwA%3D%3D)
+
+There is a native application (available on both Android and iOS) for the patient to keep track of his medicines and get daily reminders.
 #### How to run
 - Navigate to the mobile-app folder in the source code.
 - Open the terminal and enter the following commands
