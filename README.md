@@ -8,10 +8,10 @@ By SudoCode
 
 
 # Navigating this repo
-### [Web client](https://abhisheksharma.design/meditrack-web]
+### [Web client](https://abhisheksharma.design/meditrack-web)
 Bridging the gap between chemists and consumers.
 
-### [Mobile app](Link to expo demo)
+### [Mobile app](#) 
 Helping you track your dosages easily.
 
 ### [API and Backend](https://meditrack-api.herokuapp.com)
