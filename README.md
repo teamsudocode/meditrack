@@ -2,6 +2,9 @@
 Submission for GE Digital Industrial IOT Hackathon
 
 By team `sudocode`
+
+[View the presentation](https://drive.google.com/open?id=0B0Q8qfGisPMeUnFWbUF0bTk3bVE)
+
 ![](https://raw.githubusercontent.com/littlewonder/meditrack-web/master/screenshots/Meditrack-Screenshot-1.png?token=ASVjeiYH5toqSEdAied4JW2potsEYAllks5Z0TQMwA%3D%3D)
 
 
@@ -9,9 +12,6 @@ By team `sudocode`
 Meditrack is a complete answer to the needs of a 21st century patient. In your busy life, you often forgot to take your important pill. Meditrack aims to eradicate the problem of missing a dosage -- or taking a double dose because you forgot.
 
 The project is divided into a native mobile application (for the patients) and a responsive web application (for the pharmacist).
-
-# Advancing healthcare using connected devices
-
 
 # Navigating this repo
 ### [Web client](https://abhisheksharma.design/meditrack-web)
