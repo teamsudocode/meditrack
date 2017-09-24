@@ -4,14 +4,17 @@ By SudoCode
 
 # About this product
 
-# How related to IOT? 
+# Advancing healthcare using connected devices
+
 
 # Navigating this repo
-### [The web client](abhisheksharma.design/meditrack-web]
+### [Web client](https://abhisheksharma.design/meditrack-web]
+Bridging the gap between chemists and consumers.
 
 ### [Mobile app](Link to expo demo)
-
+Helping you track your dosages easily.
 
 ### [API and Backend](https://meditrack-api.herokuapp.com)
+The engine behind the entire data flow.
 * View on [Heroku](https://meditrack-api.herokuapp.com)
-* Link to [Postman Collection](proper link)
+* Link to [Postman Collection](https://www.getpostman.com/collections/4ccf60db353ce08efa4c)
