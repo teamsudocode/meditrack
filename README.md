@@ -13,6 +13,12 @@ Meditrack is a complete answer to the needs of a 21st century patient. In your b
 
 The project is divided into a native mobile application (for the patients) and a responsive web application (for the pharmacist).
 
+# Motivation behind the Hack
+Improper medication use and tracking in the world leads to millions of death all around the world. Meditrack aims to eradicate the problem of missing a dosage -- or taking a double dose because you forgot. Our mission is to give people a tool to take their medications the way they're supposed to and help individuals and caretakers manage the challenges of staying on time up to date and on schedule.
+
+# The Current Product
+The 21-day timeframe was little harsh to completely create a fully functional web application and a mobile application and an API service and database to complement it. However, we've managed to create the web application and a functional prototype of the mobile application. There is a database which stores the information of the user and his prescriptions and orders. We developed an API to fetch data from this database. The integration of database and the applications are yet to be done. The main functional part of applications (web and mobile) are done, however other features (like reordering medicine, view all the bills) is yet to be implemented.
+
 # Navigating this repo
 ### [Web client](https://abhisheksharma.design/meditrack-web)
 _Bridging the gap between pharmacists and consumers_
