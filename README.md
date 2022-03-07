@@ -3,7 +3,7 @@ Submission for GE Digital Industrial IOT Hackathon
 
 By team `sudocode`
 
-[View the presentation](https://drive.google.com/open?id=0B0Q8qfGisPMeUnFWbUF0bTk3bVE)
+[View the presentation](Meditrack-TeamSudoCode.pdf)
 
 ![](https://raw.githubusercontent.com/littlewonder/meditrack-web/master/screenshots/Meditrack-Screenshot-1.png?token=ASVjeiYH5toqSEdAied4JW2potsEYAllks5Z0TQMwA%3D%3D)
 
